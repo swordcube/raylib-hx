@@ -1319,6 +1319,8 @@ extern enum abstract NPatchLayout(UInt) {
 
 #if wasm
 @:buildXml("<include name='${haxelib:raylib-hx}/source/Web.xml'/>")
+#elseif wasm_no_asnyc
+@:buildXml("<include name='${haxelib:raylib-hx}/source/WebNoAsnyc.xml'/>")
 #elseif shared_libs
 @:buildXml("<include name='${haxelib:raylib-hx}/source/DynLib.xml'/>")
 #else
